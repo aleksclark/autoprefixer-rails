@@ -150,11 +150,11 @@ module AutoprefixerRails
         end
 
         if ExecJS.runtime == ExecJS::Runtimes::Node
-          version = ExecJS.runtime.eval("process.version")
-          first = version.match(/^v(\d+)/)[1].to_i
-          if first < 6
-            raise "Autoprefixer doesn’t support Node #{version}. Update it."
-          end
+          # version = ExecJS.runtime.eval("process.version")
+          # first = version.match(/^v(\d+)/)[1].to_i
+          # if first < 6
+          #   raise "Autoprefixer doesn’t support Node #{version}. Update it."
+          # end
         end
 
         ExecJS.compile(build_js)
